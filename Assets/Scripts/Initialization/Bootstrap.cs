@@ -25,6 +25,7 @@ namespace Asteroids.Initialization
     
         public AsteroidSpawner AsteroidSpawner;
         public UFOSpawner UFOSpawner;
+        public PowerUpSpawner PowerUpSpawner;
         void Awake()
         {
             Instance = this;
@@ -43,22 +44,22 @@ namespace Asteroids.Initialization
 
         public void LookForPlayerSpawnPosition()
         {
-            var lookingForPosition = true;
-            var screenInfoQuery = _entityManager.CreateEntityQuery(typeof(ScreenInfoComponentData));
-            var screenInfoEntity = screenInfoQuery.GetSingletonEntity();
-            var screenInfoComponent = _entityManager.GetComponentData<ScreenInfoComponentData>(screenInfoEntity);
+            bool lookingForPosition = true;
+            EntityQuery screenInfoQuery = _entityManager.CreateEntityQuery(typeof(ScreenInfoComponentData));
+            Entity screenInfoEntity = screenInfoQuery.GetSingletonEntity();
+            ScreenInfoComponentData screenInfoComponent = _entityManager.GetComponentData<ScreenInfoComponentData>(screenInfoEntity);
 
-            var screenHalfWidth = screenInfoComponent.Width * .5f;
-            var screenHalfHeight = screenInfoComponent.Height * .5f;
+            float screenHalfWidth = screenInfoComponent.Width * .5f;
+            float screenHalfHeight = screenInfoComponent.Height * .5f;
 
-            var asteroidsQuery =
+            EntityQuery asteroidsQuery =
                 _entityManager.CreateEntityQuery(typeof(AsteroidTagComponent), ComponentType.ReadOnly<Translation>());
-            var translationComponentsOfAllAsteroids =
+            NativeArray<Translation> translationComponentsOfAllAsteroids =
                 asteroidsQuery.ToComponentDataArray<Translation>(Allocator.TempJob);
 
-            var isSpawnPositionValid = new NativeArray<bool>(1, Allocator.TempJob);
+            NativeArray<bool> isSpawnPositionValid = new NativeArray<bool>(1, Allocator.TempJob);
             
-            var possibleSpawnPosition = new Vector3(Random.Range(-screenHalfWidth, screenHalfWidth),
+            Vector3 possibleSpawnPosition = new Vector3(Random.Range(-screenHalfWidth, screenHalfWidth),
                 Random.Range(-screenHalfHeight, screenHalfHeight), 0);
 
             while (lookingForPosition)
