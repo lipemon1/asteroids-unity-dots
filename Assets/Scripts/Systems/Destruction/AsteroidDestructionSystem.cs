@@ -1,5 +1,6 @@
 using Asteroids.Components;
 using Asteroids.Components.Tags;
+using Asteroids.Statics;
 using Unity.Entities;
 
 namespace Asteroids.Systems
@@ -16,15 +17,21 @@ namespace Asteroids.Systems
 
         protected override void OnUpdate()
         {
-            Entities.WithoutBurst().WithStructuralChanges().WithAll<AsteroidTagComponent>().ForEach(
-                (
-                    Entity entity,
-                    in DestroyableComponentData destroyableComponentData
-                ) =>
+            Entities
+                .WithoutBurst()
+                .WithStructuralChanges()
+                .WithAll<AsteroidTagComponent>()
+                .ForEach(
+                    (
+                        Entity entity,
+                        in DestroyableComponentData destroyableComponentData
+                    ) =>
             {
-                if(destroyableComponentData.MustBeDestroyed)
+                if (destroyableComponentData.MustBeDestroyed)
+                {
                     _entityManager.DestroyEntity(entity);
-                
+                    ScoreHandler.AddScore(destroyableComponentData.PointsForDestroying);
+                }
             }).Run();
         }
     }   

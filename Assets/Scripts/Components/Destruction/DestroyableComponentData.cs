@@ -6,5 +6,6 @@ namespace Asteroids.Components
     public struct DestroyableComponentData : IComponentData
     {
         public bool MustBeDestroyed;
+        public int PointsForDestroying;
     }
 }

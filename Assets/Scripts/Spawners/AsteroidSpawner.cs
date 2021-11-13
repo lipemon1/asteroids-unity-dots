@@ -7,7 +7,7 @@ namespace Asteroids.Spawners
     {
         protected override float3 GetRotationToSpawn()
         {
-            return math.normalize(new float3(0, 0, Random.value));
+            return GetRandomRotation();
         }
     }   
 }

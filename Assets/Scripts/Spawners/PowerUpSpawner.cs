@@ -6,7 +6,7 @@ namespace Asteroids.Spawners
     {
         protected override float3 GetRotationToSpawn()
         {
-            return 0;
+            return GetRandomRotation();
         }
     }   
 }

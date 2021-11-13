@@ -79,6 +79,11 @@ namespace Asteroids.Spawners
             });
         }
 
+        protected float3 GetRandomRotation()
+        {
+            return math.normalize(new float3(0, 0, Random.value));
+        }
+
         protected abstract float3 GetRotationToSpawn();
     }   
 }

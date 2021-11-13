@@ -1,5 +1,6 @@
 using Asteroids.Components;
 using Asteroids.Components.Tags;
+using Asteroids.Statics;
 using Unity.Entities;
 
 namespace Asteroids.Systems
@@ -26,8 +27,11 @@ namespace Asteroids.Systems
                         in DestroyableComponentData destroyableComponentData
                     ) =>
                 {
-                    if(destroyableComponentData.MustBeDestroyed)
+                    if (destroyableComponentData.MustBeDestroyed)
+                    {
                         _entityManager.DestroyEntity(entity);
+                        ScoreHandler.AddScore(destroyableComponentData.PointsForDestroying);
+                    }
                 }).Run();
         }
     }   
