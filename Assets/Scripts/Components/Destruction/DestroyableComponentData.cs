@@ -7,5 +7,6 @@ namespace Asteroids.Components
     {
         public bool MustBeDestroyed;
         public int PointsForDestroying;
+        public int LastTriggerHashCode;
     }
 }

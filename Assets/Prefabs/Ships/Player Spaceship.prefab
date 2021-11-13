@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 367257760}
   - component: {fileID: 4893535202704474826}
   m_Layer: 0
-  m_Name: Spaceship
+  m_Name: Player Spaceship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,3 +409,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MustBeDestroyed: 0
   PointsForDestroying: 0
+  LastTriggerHashCode: 0

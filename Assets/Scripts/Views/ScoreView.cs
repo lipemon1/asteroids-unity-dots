@@ -12,6 +12,7 @@ namespace Asteroids.Views
         void Awake()
         {
             ScoreHandler.OnScoreChanged += OnScoreChanged;
+            OnScoreChanged(0);
         }
 
         void OnScoreChanged(int newScore)

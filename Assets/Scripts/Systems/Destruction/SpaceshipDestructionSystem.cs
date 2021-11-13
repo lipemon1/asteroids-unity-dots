@@ -1,6 +1,7 @@
 using Asteroids.Components;
 using Asteroids.Components.Tags;
 using Asteroids.Initialization;
+using Asteroids.Statics;
 using Unity.Entities;
 
 namespace Asteroids.Systems
@@ -30,6 +31,7 @@ namespace Asteroids.Systems
                     if (destroyableComponentData.MustBeDestroyed)
                     {
                         _entityManager.DestroyEntity(entity);
+                        LifeHandler.ReduceLife(1);
                         Bootstrap.Instance.LookForPlayerSpawnPosition();
                     }
                 }).Run();
