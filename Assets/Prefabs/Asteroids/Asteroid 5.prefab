@@ -378,3 +378,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MustBeDestroyed: 0
+  PointsForDestroying: 10
