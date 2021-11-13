@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 504808120}
   - component: {fileID: 504808119}
   m_Layer: 0
-  m_Name: ScoreView
+  m_Name: Score View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1676,7 +1676,7 @@ GameObject:
   - component: {fileID: 1522248908}
   - component: {fileID: 1522248907}
   m_Layer: 0
-  m_Name: LifeView
+  m_Name: Life View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1840,7 +1840,7 @@ MonoBehaviour:
   - {fileID: 967599138}
   - {fileID: 263574495}
   - {fileID: 743186966}
-  _spawnFrequency: 2
+  _spawnFrequency: 10
 --- !u!4 &2010244706
 Transform:
   m_ObjectHideFlags: 0
@@ -1879,7 +1879,7 @@ MonoBehaviour:
   - {fileID: 1375714603}
   - {fileID: 101787853}
   - {fileID: 322999414}
-  _spawnFrequency: 2
+  _spawnFrequency: 60
 --- !u!114 &2010244708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1901,7 +1901,7 @@ MonoBehaviour:
   - {fileID: 2056851149}
   - {fileID: 1057230829}
   - {fileID: 77830288}
-  _spawnFrequency: 10
+  _spawnFrequency: 5
 --- !u!1 &2048240793
 GameObject:
   m_ObjectHideFlags: 0

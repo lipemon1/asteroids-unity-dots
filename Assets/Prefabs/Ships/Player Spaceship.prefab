@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 7307987971084174992}
   - component: {fileID: 367257760}
   - component: {fileID: 4893535202704474826}
+  - component: {fileID: -5064371747108318249}
   m_Layer: 0
   m_Name: Player Spaceship
   m_TagString: Untagged
@@ -193,7 +194,7 @@ MonoBehaviour:
         Category00: 0
         Category01: 1
         Category02: 0
-        Category03: 0
+        Category03: 1
         Category04: 0
         Category05: 0
         Category06: 0
@@ -409,4 +410,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MustBeDestroyed: 0
   PointsForDestroying: 0
-  LastTriggerHashCode: 0
+--- !u!114 &-5064371747108318249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3580613344832324360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b171521154c4e49a5c85837949d2a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurTime: 1
+  MaxTime: 1
+  Active: 0

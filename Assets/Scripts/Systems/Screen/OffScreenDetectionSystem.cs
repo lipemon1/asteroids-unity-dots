@@ -32,9 +32,6 @@ namespace Asteroids.Systems
                     movementCommandsComponentData.IsMovingDown = isMovingDown;
 
                     //left
-                    // offScreenWrapperComponentData.IsOffScreenLeft =
-                    //     translation.Value.x < -(screenData.Width + offScreenWrapperComponentData.Bounds) * .5f &&
-                    //     isMovingLeft;
                     offScreenWrapperComponentData.IsOffScreenLeft =
                         translation.Value.x < -(screenData.Width + offScreenWrapperComponentData.RendererSize.x) * .5f &&
                         isMovingLeft;

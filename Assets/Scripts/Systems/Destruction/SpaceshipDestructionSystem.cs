@@ -25,10 +25,11 @@ namespace Asteroids.Systems
                 .ForEach(
                     (
                         Entity entity,
-                        ref DestroyableComponentData destroyableComponentData
+                        ref DestroyableComponentData destroyableComponentData,
+                        in InvencibilityComponentData invencibilityComponentData
                     ) =>
                 {
-                    if (destroyableComponentData.MustBeDestroyed)
+                    if (destroyableComponentData.MustBeDestroyed && !invencibilityComponentData.Active)
                     {
                         _entityManager.DestroyEntity(entity);
                         LifeHandler.ReduceLife(1);

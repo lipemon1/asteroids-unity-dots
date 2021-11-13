@@ -18,8 +18,9 @@ GameObject:
   - component: {fileID: 1819983619730389527}
   - component: {fileID: 1110320135603048008}
   - component: {fileID: 4912870346202080855}
+  - component: {fileID: -1037186055226737463}
   m_Layer: 0
-  m_Name: First Power Up
+  m_Name: Shield Power Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,9 +218,9 @@ MonoBehaviour:
       m_Override: 0
       m_Value:
         Category00: 0
-        Category01: 1
+        Category01: 0
         Category02: 0
-        Category03: 0
+        Category03: 1
         Category04: 0
         Category05: 0
         Category06: 0
@@ -253,7 +254,7 @@ MonoBehaviour:
       m_Value:
         Category00: 1
         Category01: 0
-        Category02: 1
+        Category02: 0
         Category03: 0
         Category04: 0
         Category05: 0
@@ -367,7 +368,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MustBeDestroyed: 0
   PointsForDestroying: 0
-  LastTriggerHashCode: 0
 --- !u!114 &4912870346202080855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,3 +380,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2aa1f9071635f48a4665c3f1d315a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1037186055226737463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819983619730389548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aaef10e4e1d1e841b935f0e95641794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShieldTime: 5

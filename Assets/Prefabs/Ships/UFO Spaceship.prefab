@@ -368,7 +368,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MustBeDestroyed: 0
   PointsForDestroying: 25
-  LastTriggerHashCode: 0
 --- !u!114 &6638077815301305361
 MonoBehaviour:
   m_ObjectHideFlags: 0
